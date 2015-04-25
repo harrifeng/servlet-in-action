@@ -45,6 +45,11 @@ tomcat {
 // webapp/WEB-INF/web.xml is ONLY default web.xml location for war plugin
 // tomcat plugin should use following task level configuration to point out
 // the web.xml
-[tomcatRun]*.with {
-    webDefaultXml = file('${project.webAppDir}/WEB-INF/web.xml')
+
+tomcatRun {
+    webDefaultXml = file("${project.webAppDir}/WEB-INF/web.xml")
+}
+
+tomcatRunWar {
+    webDefaultXml = file("${project.webAppDir}/WEB-INF/web.xml")
 }
