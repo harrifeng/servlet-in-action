@@ -38,3 +38,10 @@ buildscript {
     }
 }
 
+tomcat {
+    httpPort = 8088
+}
+
+[tomcatRun]*.with {
+    webDefaultXml = file('${project.webAppDir}/WEB-INF/web.xml')
+}
