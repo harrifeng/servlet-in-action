@@ -16,6 +16,6 @@ include 'api'
 include 'services:webservice'
 */
 
-include 'webcontainer'
+// include 'webcontainer'
 
 rootProject.name = 'servlet-in-action'
