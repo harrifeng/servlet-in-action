@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'war'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
