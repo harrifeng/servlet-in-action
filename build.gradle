@@ -1,7 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'war'
-apply plugin: 'jetty'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -16,7 +15,7 @@ repositories {
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
-    providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
 
     // The production code uses the SLF4J logging API at compile time
     compile 'org.slf4j:slf4j-api:1.7.7'
@@ -27,4 +26,21 @@ dependencies {
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.11'
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.bmuschko:gradle-tomcat-plugin:2.1'
+    }
+}
+
+subprojects {
+   apply plugin : "java"
+   repositories {
+      mavenCentral()
+   }
 }
