@@ -18,6 +18,10 @@ dependencies {
 
     // The production code uses the SLF4J logging API at compile time
     compile 'org.slf4j:slf4j-api:1.7.7'
+    compile 'org.springframework:spring-core:4.1.0.RELEASE'
+    compile 'org.springframework:spring-web:4.1.0.RELEASE'
+    compile 'org.springframework:spring-webmvc:4.1.0.RELEASE'
+    compile 'javax.servlet.jsp.jstl:jstl:1.2'
 
     testCompile 'junit:junit:4.11'
     def tomcatVersion = '7.0.59'
