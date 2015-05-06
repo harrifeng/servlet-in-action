@@ -13,6 +13,6 @@ public class OtherServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
-        out.println("Other do one...");
+        out.println("Other do one... data is:" + req.getParameter("data"));
      }
 }

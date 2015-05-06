@@ -15,8 +15,7 @@ public class Some extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
         out.println("Some do one...");
-        RequestDispatcher dispatcher = req.getRequestDispatcher("other.view");
-        dispatcher.include(req, resp);
+        req.getRequestDispatcher("other.view?data=123456").include(req, resp);
         out.println("Some do two...");
         out.close();
     }
